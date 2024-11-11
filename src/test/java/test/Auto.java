@@ -13,25 +13,21 @@ public class Auto {
     }
     
     public int cantidadAsientos() {
-        cantidad = 0; // Inicializamos el contador en 0
-
-        // Recorremos cada elemento en el array asientos
+        int cantidad = 0;
         for (Asiento asiento : asientos) {
-            if (asiento != null) {  // Verifica si el asiento no es null
-                cantidad++;         // Si es un objeto Asiento, incrementamos el contador
+            if (asiento != null) {
+                cantidad++;
             }
         }
 
-        return cantidad;  // Retornamos la cantidad total de asientos que no son null
+        return cantidad;
     }
 
     public String verificarIntegridad() {
-        // Verificar que el registro del motor coincida con el del auto
         if (!this.registro.equals(motor.registro)) {
             return "Las piezas no son originales";
         }
 
-        // Verificar que el registro de cada asiento coincida con el del auto
         for (Asiento asiento : asientos) {
             if (asiento != null && !this.registro.equals(asiento.registro)) {
                 return "Las piezas no son originales";
@@ -40,7 +36,7 @@ public class Auto {
 
         return "Auto original";
     }
-    
+
     public Auto() {
         cantidadCreados++;  // Incrementa cada vez que se crea un nuevo Auto
     }
