@@ -5,7 +5,6 @@ public class Asiento {
         Integer precio;
         Integer registro;
         public static void main(String[] args) {
-        
         }
     public void cambiarColor(String nuevoColor) {
         if (nuevoColor.equals("rojo") || nuevoColor.equals("verde") || 
@@ -13,10 +12,5 @@ public class Asiento {
             nuevoColor.equals("blanco")) {
             this.color = nuevoColor;
         } 
-        else {
-            System.out.println("Color no permitido. No se cambiara el color.");
-        }
-    
     }
-    
 }

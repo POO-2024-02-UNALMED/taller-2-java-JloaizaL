@@ -5,12 +5,10 @@ public class Motor {
     String tipo;
     Integer registro;
     public static void main(String[] args) {
-        
     }
 
     public void cambiarRegistro(int nuevoRegistro) {
         this.registro = nuevoRegistro;
-        
     }
 
     public void asignarTipo(String nuevoTipo) {
